@@ -13,7 +13,7 @@ steps:
   inputs:
     command: 'restore'
     projects: '**/*.csproj'
-    
+
 - task: DotNetCoreCLI@2
   displayName: 'Build the project - $(buildConfiguration)'
   inputs:
@@ -36,6 +36,6 @@ steps:
   displayName: 'Publish NuGet package'
   inputs:
     command: push
-    publishVstsFeed: 'Azure2020Q4 - web - Dependencies/SharedLibrary'
+    publishVstsFeed: 'az-2020q4-dependencies/SharedLibrary'
     allowPackageConflicts: true
   condition: succeeded()
