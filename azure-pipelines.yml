@@ -16,7 +16,7 @@ steps:
     arguments: '--no-restore --configuration $(buildConfiguration)'
     projects: '**/*.csproj'
    
- - task: DotNetCoreCLI@2
+- task: DotNetCoreCLI@2
    displayName: 'Pack the project - $(buildConfiguration)'
    inputs:
      command: 'pack'
@@ -31,6 +31,6 @@ steps:
   displayName: 'Publish NuGet package'
   inputs:
     command: push
-    publishVstsFeed: 'Azure2020Q4 - web - Dependencies/SharedLibrary.SharedLibrary'
+    publishVstsFeed: 'Azure2020Q4 - web - Dependencies/SharedLibrary'
     allowPackageConflicts: true
   condition: succeeded()
