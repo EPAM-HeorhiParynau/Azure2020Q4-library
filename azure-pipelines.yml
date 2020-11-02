@@ -36,6 +36,6 @@ steps:
   displayName: 'Publish NuGet package'
   inputs:
     command: push
-    publishVstsFeed: 'az-2020q4-dependencies/SharedLibrary'
+    publishVstsFeed: 'az-2020q4-dependencies/Azure2020Q4-library'
     allowPackageConflicts: true
   condition: succeeded()
